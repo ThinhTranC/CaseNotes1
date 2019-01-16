@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CaseNotes1.NewNotePage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save"
+                     Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+
+                <Picker x:Name="pickerPurposeOfVisit" Title="Select a purpose of the visit">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Adoption Services</x:String>
+                            <x:String>Care Planning</x:String>
+                            <x:String>Carer Management</x:String>
+                            <x:String>Contact About Child</x:String>
+                            <x:String>Contact With Child</x:String>
+                            <x:String>Other</x:String>
+                            <x:String>Intensive Family Support</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            
+            
+            
+                <Label Text="Date"/>
+            <DatePicker MinimumDate="01/01/2017"
+                        MaximumDate="01/01/2022"/>
+            <Label Text="Start Time"/>
+
+            <Label Text="End Time"/>
+            <TimePicker/>
+
+            <Label Text="No show"/>
+            <Switch />
+
+            <Label Text="Home Visit"/>
+            <Switch />
+
+            <Label Text="Who was present?"/>
+            <Entry Placeholder="who was present?"></Entry>
+
+            <Label Text="Additional case worker"></Label>
+            <Entry Placeholder="additional case worker"></Entry>
+
+            <Label Text="Who was present?"/>
+            <Entry Placeholder="who was present?"></Entry>
+
+            <Label Text="Notes"></Label>
+            <Editor Placeholder="notes editors"></Editor>
+
+            <Label Text="Assessment Observation"/>
+            <Editor Placeholder="Assessment Observation"></Editor>
+
+            <Label Text="Action Plan"></Label>
+            <Editor Placeholder="Action Plan"></Editor>
+
+
+          
+
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
